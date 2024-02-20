@@ -1,0 +1,16 @@
+.Btn1,
+.Btn2 {
+    font-size: 28px;
+    font-family: Helvetica, "Times New Roman", sans-serif;
+}
+
+.Btn1 {
+    color: white;
+    background-color: #000000;
+    font-weight: bold;
+}
+
+.Btn2 {
+    color: #000000;
+    background-color: #ffff00;
+}
