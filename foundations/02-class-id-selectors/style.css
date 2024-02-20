@@ -1,0 +1,22 @@
+.classic {
+    color: #000000;
+    background-color: #ff9a85;
+    font-family: verdana, "dejaVu Sans", sans-serif;
+    font-size: 18px;
+}
+
+.cooler {
+    font-size: 24px;
+}
+
+#Number2 {
+    font-family: sans-serif;
+    color: #0000ff;
+    font-size: 36px;
+}
+
+#Number4 {
+    font-family: sans-serif;
+    background-color: #90ee90;
+    font-weight: bold;
+}
