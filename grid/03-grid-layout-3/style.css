@@ -1,91 +1,155 @@
 * {
-  margin: 0;
-  padding: 0;
+    margin: 0;
+    padding: 0;
 }
 
 .container {
-  text-align: center;
+    height: 100vh;
+    text-align: center;
+    display: grid;
+    grid-template: 2fr 1fr 18fr 1fr/ 1fr 4fr;
+    grid-gap: 4px;
+    grid-template-areas:
+        "header header"
+        "sidebar nav"
+        "sidebar article"
+        "footer footer";
 }
 
 .container div {
-  padding: 15px;
-  font-size: 32px;
-  font-family: Helvetica;
-  font-weight: bold;
-  color: white;
+    padding: 15px;
+    font-size: 32px;
+    font-family: Helvetica;
+    font-weight: bold;
+    color: white;
 }
 
 .header {
-  background-color: #393f4d;
+    background-color: #393f4d;
+    grid-area: header;
+    display: grid;
+    grid-template: 1fr/ 1fr 4fr;
+    grid-template-areas: "logo mainMenu";
+    align-items: center;
+}
+
+.logo {
+    grid-area: logo;
+}
+
+#menu-list {
+    grid-area: mainMenu;
+    display: grid;
+    grid-template: 1fr / repeat(5, 1fr);
+    grid-template-areas: ". link1 link2 link3 link4";
+}
+
+#link1 {
+    grid-area: link1;
+}
+
+#link2 {
+    grid-area: link2;
+}
+
+#link3 {
+    grid-area: link3;
+}
+
+#link4 {
+    grid-area: link4;
 }
 
 .menu ul,
 .menu li {
-  font-size: 16px;
+    font-size: 16px;
+    list-style: none;
 }
 
 .sidebar {
-  background-color: #C50208;
+    background-color: #c50208;
+    grid-area: sidebar;
+    display: grid;
+    grid-template: repeat(4, 1fr) / 1fr;
+    row-gap: 50px;
 }
 
 .sidebar .photo {
-  background-color: white;
-  color: black;
-  font-size: 12px;
-  font-weight: normal;
-  border-radius: 10px;
+    background-color: white;
+    color: black;
+    font-size: 12px;
+    font-weight: normal;
+    border-radius: 10px;
+    display: grid;
+    align-items: center;
 }
 
-
 .sidebar .side-content {
-  background-color: white;
-  color: black;
-  font-size: 16px;
-  font-weight: normal;
+    background-color: white;
+    color: black;
+    font-size: 16px;
+    font-weight: normal;
+    align-items: center;
+    display: grid;
+    align-items: center;
 }
 
 .nav {
-  background-color: #C50208;
+    background-color: #c50208;
+    grid-area: nav;
+}
+
+.nav ul {
+    display: grid;
+    grid-template: 1fr / repeat(3, 1fr);
+    list-style: none;
 }
 
 .nav ul li {
-  font-size: 16px;
-  text-transform: uppercase;
+    font-size: 16px;
+    text-transform: uppercase;
 }
 
 .article {
-  background-color: #bccbde;
+    background-color: #bccbde;
+    grid-area: article;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    grid-gap: 15px;
 }
 
 .article p {
-  font-size: 18px;
-  font-family: sans-serif;
-  color: white;
-  text-align: left;
+    font-size: 18px;
+    font-family: sans-serif;
+    color: white;
+    text-align: left;
 }
 
 .article .card {
-  background-color: #FFFFFF;
-  color: black;
-  text-align: center;
+    background-color: #ffffff;
+    color: black;
+    text-align: center;
+    height: 200px;
 }
 
 .card p {
-  color: black;
-  font-weight: normal;
-  font-size: 14px;
+    color: black;
+    font-weight: normal;
+    font-size: 14px;
+    padding: 5px;
 }
 
 .card .title {
-  font-size: 18px;
-  text-align: center;
+    font-size: 18px;
+    text-align: center;
 }
 
 .footer {
-  background-color: #393f4d;
+    background-color: #393f4d;
+    grid-area: footer;
 }
 
 .footer p {
-  font-size: 13px;
-  font-weight: normal;
+    font-size: 13px;
+    font-weight: normal;
 }
